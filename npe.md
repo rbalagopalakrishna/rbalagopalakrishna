@@ -8,89 +8,65 @@
 rbalagopalakrishna/rbalagopalakrishna is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
-To get admin access of VDI: 
 
+========================================
+Setup NEP environment in windows machine
+========================================
+
+
+Login into VMware Horizon server : https://vdiair.nike.com/appblast/webclient/#/home
+
+
+To get admin access of VDI:
+---------------------------
+ 
 Go to nike tools and install "promote to administrator" and then restart the system 
 
- 
 
-Tools required for NPE setup: 
+Requirements?
+-------------
+Install python & pip
+Install golang
 
- 
-
-Install python & pip 
-
-Install golang 
-
- 
-
-Install GitBash 
-
+Install GitBash
 Generate ssh key and add it to https://github.com/settings/keys  
 
- 
-
 Install npectl 
-
 Download the binary from and move to C:\Users\<your_userID> 
-
 https://github.com/nike-platform-engine/core-cli 
 
- 
-
- 
-
 Install kubectl 
-
 Download binary from and move it to C:\Users\<your_userID> 
-
 https://dl.k8s.io/release/v1.23.0/bin/windows/amd64/kubectl.exe 
 
- 
-
- 
-
 Install Terraform  
-
 Download binary from and move it to C:\Users\<your_userID> 
-
 https://releases.hashicorp.com/terraform/1.1.3/terraform_1.1.3_windows_amd64.zip 
 
  
-
 Install awscli using pip  
 # pip3 install awsebcli --upgrade 
 
- 
-
 Install gimme-aws-creds using pip 
-#  pip3 install --upgrade gimme-aws-creds 
+# pip3 install --upgrade gimme-aws-creds 
+
 
  
-
+Build npectl binary:
+--------------------
  
-
- 
-
-To build npectl binary: 
-
- 
-
 Clone: https://github.com/nike-platform-engine/core-cli 
-
- 
 
 Set Environment variables: 
 
- 
-
-GO111MODULE="on" 
+```GO111MODULE="on" 
 
 export PATH="$PATH:$GOBIN" 
 
 export GOPROXY='https://proxy.golang.nike.com' 
 
-export GONOSUMDB='*.nike.com,github.com/nike*,github.com/Nike*,k8s.io.*' 
+export GONOSUMDB='*.nike.com,github.com/nike*,github.com/Nike*,k8s.io.*'
+```
 
  
 
@@ -100,8 +76,9 @@ Build Command: go build -o npectl .
 
  
 
-Configure gimme-aws-creds 
-
+ 
+Configure gimme-aws-creds:
+--------------------------
  
 
  
